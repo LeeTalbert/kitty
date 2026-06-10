@@ -24,7 +24,7 @@ BuildRequires:  python%{pyver}dist(sphinx)
 BuildRequires:  python%{pyver}dist(sphinx-autobuild)
 BuildRequires:  python%{pyver}dist(sphinx-copybutton)
 BuildRequires:  python%{pyver}dist(sphinx-inline-tabs)
-BuildRequires:  python-sphinxext-opengraph
+BuildRequires:  python%{pyver}dist(sphinxext-opengraph)
 BuildRequires:  python%{pyver}dist(furo)
 BuildRequires:  python%{pyver}dist(matplotlib)
 BuildRequires:  pkgconfig(ImageMagick)
