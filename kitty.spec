@@ -4,11 +4,11 @@
 Name: kitty
 Summary: Fast, featureful, GPU based terminal emulator
 Version:	0.47.2
-Release:	1
+Release:	2
 Group: Terminals
 License: GPL-3.0-only
 URL: https://github.com/kovidgoyal/kitty
-Source0: https://github.com/kovidgoyal/kitty/releases/download/v%{version}/kitty-%{version}.tar.xz
+Source0: https://github.com/kovidgoyal/kitty/releases/download/v%{version}/kitty-%{version}.tar.gz
 Source1:  https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdFontsSymbolsOnly.tar.xz
 ### Go vendor source for kitty
 # from within the source tree run the following:
@@ -21,8 +21,12 @@ Source2:  %{name}-%{version}-vendor.tar.xz
 BuildRequires:  git
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python%{pyver}dist(sphinx)
+BuildRequires:  python%{pyver}dist(sphinx-autobuild)
 BuildRequires:  python%{pyver}dist(sphinx-copybutton)
 BuildRequires:  python%{pyver}dist(sphinx-inline-tabs)
+BuildRequires:  python-sphinxext-opengraph
+BuildRequires:  python%{pyver}dist(furo)
+BuildRequires:  python%{pyver}dist(matplotlib)
 BuildRequires:  pkgconfig(ImageMagick)
 BuildRequires:  %{_lib}rsync-devel
 BuildRequires:  pkgconfig(gl)
@@ -47,7 +51,6 @@ BuildRequires:  pkgconfig(libxxhash)
 BuildRequires:  pkgconfig(simde)
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(cairo-fc)
-BuildRequires:	ncurses
 
 Requires:	%{name}-shell-integration
 Requires:	%{name}-terminfo
