@@ -19,6 +19,7 @@ Source1:  https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdF
 Source2:  %{name}-%{version}-vendor.tar.xz
 
 BuildRequires:  git
+BuildRequires:  make
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python%{pyver}dist(sphinx)
 BuildRequires:  python%{pyver}dist(sphinx-autobuild)
